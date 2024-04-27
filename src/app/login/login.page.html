@@ -1,0 +1,116 @@
+<div class="spinner-box overlay" *ngIf="mostrarSpinner">
+  <div class="configure-border-1">  
+    <div class="configure-core"></div>
+  </div>  
+  <div class="configure-border-2">
+    <div class="configure-core"></div>
+  </div> 
+</div>
+
+<ion-header [translucent]="true">
+  <ion-toolbar id="title">
+    <img src="assets/icon/memoria.png">
+    <img src="assets/icon/memoria.png">
+    <img src="assets/icon/memoria.png">
+    <img src="assets/icon/memoria.png">
+    <img src="assets/icon/memoria.png">
+    <img src="assets/icon/memoria.png">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="container">
+
+  <div class="error-notification" *ngIf="mostrarError">
+    {{ mensajeError }}
+  </div>
+
+  <div class="divImage">
+    <img src="assets/icon/memoria.png">
+    <img src="assets/icon/memoria.png">
+    <img src="assets/icon/memoria.png">
+    <img src="assets/icon/memoria.png">
+    <img src="assets/icon/memoria.png">
+    <img src="assets/icon/memoria.png">
+    <img src="assets/icon/memoria.png">
+    <img src="assets/icon/memoria.png">
+    <img src="assets/icon/memoria.png">
+    <img src="assets/icon/memoria.png">
+    <img src="assets/icon/memoria.png">
+    <img src="assets/icon/memoria.png">
+  </div>
+  <form class="form-singin">
+    <div class="container-chips">
+      <div class="chips">
+        <ion-chip (click)="cambiarUsuario('admin')">
+          <ion-avatar>
+            <img src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+          </ion-avatar>
+          <ion-label>Admin</ion-label>
+        </ion-chip>
+        <ion-chip (click)="cambiarUsuario('invitado')">
+          <ion-avatar>
+            <img  src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+          </ion-avatar>
+          <ion-label>Invitado</ion-label>
+        </ion-chip>
+        <ion-chip (click)="cambiarUsuario('anonimo')">
+          <ion-avatar>
+            <img src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+          </ion-avatar>
+          <ion-label>Anonimo</ion-label>
+        </ion-chip>
+      </div>
+      <div class="chips">
+        <ion-chip (click)="cambiarUsuario('usuario')">
+          <ion-avatar>
+            <img  src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+          </ion-avatar>
+          <ion-label>Usuario</ion-label>
+        </ion-chip>
+        <ion-chip (click)="cambiarUsuario('tester')">
+          <ion-avatar>
+            <img src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+          </ion-avatar>
+          <ion-label>Tester</ion-label>
+        </ion-chip>
+      </div>
+    </div>
+    
+    <label>Iniciar Sesión</label>
+
+    <div class="inputs">
+      <input id="Iemail" type="email" [(ngModel)]="correo" name="email" placeholder="Ingrese su correo electronico">
+      <input id="Ipass" type="password" [(ngModel)]="password" name="clave" placeholder="Ingrese su contraseña">
+
+      <button (click)="ingresar()">Aceptar</button>
+
+      <img src="assets/icon/memoria.png">
+    </div>
+  
+  </form>
+  <div class="divImage" style="right:0%;">
+    <img src="assets/icon/memoria.png">
+    <img src="assets/icon/memoria.png">
+    <img src="assets/icon/memoria.png">
+    <img src="assets/icon/memoria.png">
+    <img src="assets/icon/memoria.png">
+    <img src="assets/icon/memoria.png">
+    <img src="assets/icon/memoria.png">
+    <img src="assets/icon/memoria.png">
+    <img src="assets/icon/memoria.png">
+    <img src="assets/icon/memoria.png">
+    <img src="assets/icon/memoria.png">
+    <img src="assets/icon/memoria.png">
+  </div>
+</ion-content>
+
+<ion-footer [translucent]="true">
+  <ion-toolbar id="title">
+    <img src="assets/icon/memoria.png">
+    <img src="assets/icon/memoria.png">
+    <img src="assets/icon/memoria.png">
+    <img src="assets/icon/memoria.png">
+    <img src="assets/icon/memoria.png">
+    <img src="assets/icon/memoria.png">
+  </ion-toolbar>
+</ion-footer>

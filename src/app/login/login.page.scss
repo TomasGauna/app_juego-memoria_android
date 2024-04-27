@@ -1,0 +1,263 @@
+//@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    --background: #70b6f3;
+    font-family: 'Josefin Sans';
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-singin{
+    width: 80%;
+    height: 90%;
+    position: absolute;
+    background: #5c7bdd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 8%;
+    left: 17%;
+    background: transparent;
+    font-family: 'Josefin Sans';
+}
+
+.form-singin label{
+    position: absolute;
+    font-size: 44px;
+    top: 28%;
+    left: 4%;
+    font-weight: bold;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 2);
+    font-family: 'Josefin Sans';
+}
+
+
+#title{
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    --background: #f5bb5e;
+    font-family: 'Josefin Sans';
+}
+
+#title img{
+    width: 16.6%;
+    height: auto;
+}
+
+.divImage{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 16.6%;
+    height: auto;
+}
+
+.inputs{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    right: 8%;
+    bottom: 0%;
+    font-family: 'Josefin Sans';
+}
+
+#Iemail,
+#Ipass{
+    width: 110%;
+    height: 35%;
+    margin: 15px;
+    padding: 12px;
+    border: none;
+    background-color: #f97980;
+    color: white;
+    border-radius: 2px;
+    font-family: 'Josefin Sans';
+}
+
+#Iemail::placeholder,
+#Ipass::placeholder
+{
+    color: white;
+    font-family: 'Josefin Sans';
+}
+
+.inputs button{
+    width: 60%;
+    padding: 10px;
+    border-radius: 2px;
+    margin-top: 30px;
+    font-size: 18px;
+    background-color: #f5bb5e;
+    color: black;
+    font-family: 'Josefin Sans';
+}
+
+.container-chips{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    right: 16%;
+    top: 0%;
+    font-family: 'Josefin Sans';
+}
+
+.chips{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Josefin Sans';
+}
+
+.chips ion-chip{
+    margin: 20px;
+    padding: auto;
+    background-color: #f97980;
+    font-family: 'Josefin Sans';
+}
+
+.inputs img{
+    position: absolute;
+    width: 50%;
+    height: auto;
+    top: 140%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 3);
+    border-radius: 10px;
+    font-family: 'Josefin Sans';
+}
+
+
+.error-notification {
+    position: absolute;
+    width: 100%;
+    padding: 16px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    transition: transform 0.3s;
+    top: 90%;
+    transform: translateY(-100%);
+  }
+
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .configure-border-1 {
+    width: 115px;
+    height: 115px;
+    padding: 3px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f97980;
+    z-index: 1000;
+    animation: configure-clockwise 3s ease-in-out 0s infinite alternate;
+  }
+  
+  .configure-border-2 {
+    width: 115px;
+    height: 115px;
+    padding: 3px;
+    left: -115px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    background: #70b6f3;
+    transform: rotate(45deg);
+    animation: configure-xclockwise 3s ease-in-out 0s infinite alternate;
+  }
+  
+  .configure-core {
+    width: 100%;
+    height: 100%;
+    background-color: #1d2630;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0);
+    }
+    to{
+      transform: rotate(359deg);
+    }
+  }
+  
+  @keyframes spin3D {
+    from {
+      transform: rotate3d(.5,.5,.5, 360deg);
+    }
+    to{
+      transform: rotate3d(0deg);
+    }
+  }
+  
+  @keyframes configure-clockwise {
+    0% {
+      transform: rotate(0);
+    }
+    25% {
+      transform: rotate(90deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    75% {
+      transform: rotate(270deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes configure-xclockwise {
+    0% {
+      transform: rotate(45deg);
+    }
+    25% {
+      transform: rotate(-45deg);
+    }
+    50% {
+      transform: rotate(-135deg);
+    }
+    75% {
+      transform: rotate(-225deg);
+    }
+    100% {
+      transform: rotate(-315deg);
+    }
+  }
+  
+  @keyframes pulse {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+    to {
+      opacity: .25;
+      transform: scale(.75);
+    }
+  }
